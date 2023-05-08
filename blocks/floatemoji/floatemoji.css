@@ -1,0 +1,12 @@
+#containear {
+  position: relative;
+  background: transparent;
+}
+
+#animate {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: transparent;
+  font-size: 25px;
+}
