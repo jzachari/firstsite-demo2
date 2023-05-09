@@ -20,5 +20,7 @@ function myMove() {
 export default function decorate(block) {
   let new_div = document.createElement("div");
   div.id = "container";
+    let new_div2 = document.createElement("div");
+    div.id = "animate";
   myMove; 
 }
