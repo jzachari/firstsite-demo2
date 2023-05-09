@@ -22,5 +22,8 @@ export default function decorate(block) {
   div.id = "container";
     let new_div2 = document.createElement("div");
     div.id = "animate";
-  myMove; 
+      var x = document.createElement("BUTTON");
+      var t = document.createTextNode("Click me");
+      x.appendChild(t);
+      document.body.appendChild(x);
 }
