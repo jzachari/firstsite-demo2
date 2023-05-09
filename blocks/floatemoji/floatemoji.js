@@ -18,5 +18,7 @@ function myMove() {
 }
 
 export default function decorate(block) {
+  let new_div = document.createElement("div");
+  div.id = "container";
   myMove; 
 }
