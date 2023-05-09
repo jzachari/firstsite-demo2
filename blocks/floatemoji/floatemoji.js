@@ -18,5 +18,5 @@ function myMove() {
 }
 
 export default function decorate(block) {
-
+  myMove; 
 }
