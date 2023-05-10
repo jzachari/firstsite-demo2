@@ -29,4 +29,6 @@ export default function decorate(block) {
     x.addEventListener("click", myMove);
     new_div.appendChild(new_div2);
       document.body.appendChild(new_div);
+  var emoji = document.createTextNode("❤️");
+  new_div2.appendChild(emoji);
 }
