@@ -11,7 +11,9 @@ function myMove() {
       clearInterval(id);
     } else {
       pos++;
-      elem.style.top = -pos + "px";
+      let radians = pos * Math.PI/180;
+      let vpos = Math.sin(radians);
+      elem.style.top = -vpos + "px";
       elem.style.left = pos + "px";
     }
   }
