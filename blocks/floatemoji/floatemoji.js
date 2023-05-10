@@ -12,7 +12,7 @@ function myMove() {
     } else {
       pos++;
       let radians = pos * Math.PI/180;
-      let vpos = pos + 10 * Math.sin(radians);
+      let vpos = pos + 100 * Math.sin(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = pos + "px";
     }
