@@ -1,5 +1,7 @@
 function myMove() {
   let id = null;
+  const elem = document.getElementById("animate");
+  const elemmirror = document.getElementById("animatemirror");
   let pos = 0;
   let vpos = 0;
   clearInterval(id);
@@ -9,13 +11,15 @@ function myMove() {
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
-    } else {
-      const elem = document.getElementById("animate");
+    } else {      
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = pos + "px";
+      vposmirror = pos + 100 * Math.cos(radians);
+      elemmirror.style.top = -vposmirror + "px";
+      elemmirror.style.left = pos + "px";
     }
   }
 }
