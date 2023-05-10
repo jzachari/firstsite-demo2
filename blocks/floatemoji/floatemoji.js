@@ -4,6 +4,7 @@ function myMove() {
   const elemmirror = document.getElementById("animatemirror");
   let pos = 0;
   let vpos = 0;
+  let vposmirror = 0;
   clearInterval(id);
   id = setInterval(frame, 1);
   var w = window.innerWidth;
