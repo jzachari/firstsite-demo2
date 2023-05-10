@@ -7,7 +7,7 @@ function myMove() {
   var w = window.innerWidth;
   var h = window.innerHeight;
   function frame() {
-    if (pos == h) {
+    if (vpos == h) {
       clearInterval(id);
     } else {
       pos++;
