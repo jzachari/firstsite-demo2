@@ -22,16 +22,21 @@ function myMove() {
 
 export default function decorate(block) {
   let new_div = document.createElement("div");
-  new_div.id = "container";
-    let new_div2 = document.createElement("div");
+    new_div.id = "container";
+  let new_div2 = document.createElement("div");
     new_div2.id = "animate";
-      var x = document.createElement("BUTTON");
-      var t = document.createTextNode("Click me");
-      x.appendChild(t);
-      document.body.appendChild(x);
+  var x = document.createElement("BUTTON");
+  var t = document.createTextNode("Click me");
+    x.appendChild(t);
+    document.body.appendChild(x);
     x.addEventListener("click", myMove);
-    new_div.appendChild(new_div2);
-      document.body.appendChild(new_div);
+  new_div.appendChild(new_div2);
+    document.body.appendChild(new_div);
   var emoji = document.createTextNode("❤️");
-  new_div2.appendChild(emoji);
+    new_div2.appendChild(emoji);
+  let new_div3 = document.createElement("div");
+    new_div3.id = "animatemirror";
+    new_div.appendChild(new_div3);
+      var emojimirror = document.createTextNode("❤️");
+      new_div3.appendChild(emojimirror);
 }
