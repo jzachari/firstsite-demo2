@@ -1,6 +1,5 @@
 function myMove() {
   let id = null;
-  const elem = document.getElementById("animate");
   let pos = 0;
   let vpos = 0;
   clearInterval(id);
@@ -11,6 +10,7 @@ function myMove() {
     if (vpos >= h) {
       clearInterval(id);
     } else {
+      const elem = document.getElementById("animate");
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
