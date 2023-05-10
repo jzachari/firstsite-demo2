@@ -2,6 +2,7 @@ function myMove() {
   let id = null;
   const elem = document.getElementById("animate");
   let pos = 0;
+  let vpos =0;
   clearInterval(id);
   id = setInterval(frame, 1);
   var w = window.innerWidth;
@@ -12,7 +13,7 @@ function myMove() {
     } else {
       pos++;
       let radians = pos * Math.PI/180;
-      let vpos = pos + 100 * Math.sin(radians);
+      vpos = pos + 100 * Math.sin(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = pos + "px";
     }
