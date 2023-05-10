@@ -26,6 +26,7 @@ export default function decorate(block) {
       var t = document.createTextNode("Click me");
       x.appendChild(t);
       document.body.appendChild(x);
+    x.addEventListener("click", myMove);
     new_div.appendChild(new_div2);
       document.body.appendChild(new_div);
 }
