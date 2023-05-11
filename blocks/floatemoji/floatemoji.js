@@ -31,6 +31,7 @@ function myMove2() {
   const elem = document.getElementById("animate2");
   const elemmirror = document.getElementById("animatemirror2");
   let pos = 50;
+  let hpos = 50;
   let vpos = 0;
   let vposmirror = 50;
   clearInterval(id);
@@ -44,9 +45,11 @@ function myMove2() {
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
+      hpos = pos +  100 * Math.cos(radians);
       elem.style.top = -vpos + "px";
-      elem.style.left = pos + "px";
-      vposmirror = pos + 100 * Math.cos(radians);
+      elem.style.left = hpos + "px";
+ //     vposmirror = pos + 100 * Math.cos(radians);
+        vposmirror = (pos**1.1)/2;     
       elemmirror.style.top = -vposmirror + "px";
       elemmirror.style.left = pos + "px";
     }
