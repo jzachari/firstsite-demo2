@@ -40,3 +40,9 @@
   background-color: transparent;
   font-size: 25px;
 }
+
+#floatemojitext {
+  margin-left: 25px;
+  margin-top: 25px;
+  font-weight: bold;
+}

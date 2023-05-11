@@ -64,7 +64,20 @@ function myMove2() {
   }
 }
 
+
+
 export default function decorate(block) {
+  //Create a div to be used with a text
+  let floatemoji_text_div = document.createElement("div");
+    floatemoji_text_div.id = "floatemojitext";
+    
+  //Create some text and nest it in floatemoji_text_div
+  var floatemojitext = document.createTextNode("Click an emoji to react to the page.");
+    floatemoji_text_div.appendChild(floatemojitext);
+
+  //Nest floatemoji_text_div in the page
+  document.body.appendChild(floatemoji_text_div);
+
   //This creates a div and gives it an id of "container", this id is referenced in the css file.
   let new_div = document.createElement("div");
     new_div.id = "container";
@@ -79,10 +92,6 @@ export default function decorate(block) {
 //   x.appendChild(t);
 //   document.body.appendChild(x);
 //   x.addEventListener("click", myMove);
-
-//Create some text and nest it in the page.
-  var z = document.createTextNode("Click an emoji to react to the page.");
-    document.body.appendChild(z); 
 
   //Assemble the divs.
   //nest new_div2 inside new_div.  
