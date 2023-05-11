@@ -4,7 +4,9 @@ function myMove() {
   const elemmirror = document.getElementById("animatemirror");
   let pos = 0;
   let vpos = 0;
+  let hpos = 0;
   let vposmirror = 0;
+  let hposmirror = 0;
   clearInterval(id);
   id = setInterval(frame, 1);
   var w = window.innerWidth;
@@ -16,11 +18,13 @@ function myMove() {
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
-      elem.style.top = -vpos + "px";
-      elem.style.left = pos + "px";
+      hpos = pos + 75 * Math.cos(radians);
+      elem.style.top = -pos + "px";
+      elem.style.left = hpos + "px";
       vposmirror = pos + 100 * Math.cos(radians);
-      elemmirror.style.top = -vposmirror + "px";
-      elemmirror.style.left = pos + "px";
+      hposmirror = pos + 75 * Math.sin(radians);
+      elemmirror.style.top = -pos + "px";
+      elemmirror.style.left = hposmirror + "px";
     }
   }
 }
@@ -30,10 +34,11 @@ function myMove2() {
   let id = null;
   const elem = document.getElementById("animate2");
   const elemmirror = document.getElementById("animatemirror2");
-  let pos = 50;
-  let hpos = 50;
+  let pos = 0;
+  let hpos = 0;
   let vpos = 0;
-  let vposmirror = 50;
+  let vposmirror = 0;
+  let hposmirror = 0;
   clearInterval(id);
   id = setInterval(frame, 1);
   var w = window.innerWidth;
@@ -45,13 +50,14 @@ function myMove2() {
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
-      hpos = pos +  100 * Math.cos(radians);
+      hpos = pos +  120 * Math.cos(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = hpos + "px";
  //     vposmirror = pos + 100 * Math.cos(radians);
-        vposmirror = (pos**1.1)/2;     
+        vposmirror = (pos**1.15)/2;   
+        hposmirror = pos + 50 * Math.sin(radians);  
       elemmirror.style.top = -vposmirror + "px";
-      elemmirror.style.left = pos + "px";
+      elemmirror.style.left = hposmirror + "px";
     }
   }
 }
