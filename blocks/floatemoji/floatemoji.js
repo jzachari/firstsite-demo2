@@ -50,7 +50,7 @@ function myMove2() {
       pos++;
       let radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
-      hpos = pos +  120 * Math.cos(radians);
+      hpos = pos +  100 * Math.cos(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = hpos + "px";
  //     vposmirror = pos + 100 * Math.cos(radians);
