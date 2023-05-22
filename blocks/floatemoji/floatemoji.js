@@ -1,4 +1,3 @@
-
 //myMove is for the heart animation
 function myMove() {
   let id = null;
@@ -10,7 +9,7 @@ function myMove() {
   let vposmirror = 0;
   let hposmirror = 0;
   clearInterval(id);
-  id = setInterval(frame, 5);
+  id = setInterval(frame, 5.1);
   var w = window.innerWidth;
   var h = window.innerHeight;
   function frame() {
@@ -142,3 +141,4 @@ export default function decorate(block) {
       var secondemojimirror = document.createTextNode("🚀");
       second_emoji_div_animate_mirror.appendChild(secondemojimirror);
 }
+
