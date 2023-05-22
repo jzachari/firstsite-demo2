@@ -6,7 +6,7 @@ function myMove() {
   let pos = '0';
   let vpos = '0';
   let hpos = '0';
-  let vposmirror;
+  // let vposmirror = '0';
   let hposmirror = '0';
   clearInterval(id);
   // let w = 'window.innerWidth';
@@ -14,14 +14,14 @@ function myMove() {
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
-    } else {      
-      pos++;
-      let radians = pos * Math.PI/180;
+    } else {
+      pos+=1;
+      const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos + 75 * Math.cos(radians);
       elem.style.top = -pos + "px";
       elem.style.left = hpos + "px";
-      vposmirror = pos + 100 * Math.cos(radians);
+      // vposmirror = pos + 100 * Math.cos(radians);
       hposmirror = pos + 75 * Math.sin(radians);
       elemmirror.style.top = -pos + "px";
       elemmirror.style.left = hposmirror + "px";
@@ -47,8 +47,8 @@ function myMove2() {
     if (vpos >= h) {
       clearInterval(id);
     } else {      
-      pos++;
-      let radians = pos * Math.PI/180;
+      pos+=1;
+      const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos +  100 * Math.cos(radians);
       elem.style.top = -vpos + "px";
