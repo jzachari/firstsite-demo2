@@ -6,12 +6,11 @@ function myMove() {
   let pos = '0';
   let vpos = '0';
   let hpos = '0';
-  let vposmirror = '0';
+  let vposmirror;
   let hposmirror = '0';
   clearInterval(id);
-  id = setInterval(frame, 5);
-  var w = 'window.innerWidth';
-  var h = 'window.innerHeight';
+  // let w = 'window.innerWidth';
+  let h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
@@ -28,6 +27,7 @@ function myMove() {
       elemmirror.style.left = hposmirror + "px";
     }
   }
+  id = setInterval(frame, 5);
 }
 
 // myMove2 is for the Rocket animation
@@ -41,9 +41,8 @@ function myMove2() {
   let vposmirror = '0';
   let hposmirror = '0';
   clearInterval(id);
-  id = setInterval(frame, 5);
-  var w = 'window.innerWidth';
-  var h = 'window.innerHeight';
+  // let w = 'window.innerWidth';
+  let h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
@@ -61,6 +60,7 @@ function myMove2() {
       elemmirror.style.left = hposmirror + "px";
     }
   }
+  id = setInterval(frame, 5);
 }
 
 
