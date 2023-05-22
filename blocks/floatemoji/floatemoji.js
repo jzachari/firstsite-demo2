@@ -1,4 +1,4 @@
-//myMove is for the heart animation
+// myMove is for the heart animation
 function myMove() {
   let id = null;
   const elem = document.getElementById("animate");
@@ -30,7 +30,7 @@ function myMove() {
   }
 }
 
-//myMove2 is for the Rocket animation
+// myMove2 is for the Rocket animation
 function myMove2() {
   let id = null;
   const elem = document.getElementById("animate2");
@@ -54,7 +54,7 @@ function myMove2() {
       hpos = pos +  100 * Math.cos(radians);
       elem.style.top = -vpos + "px";
       elem.style.left = hpos + "px";
- //     vposmirror = pos + 100 * Math.cos(radians);
+ // vposmirror = pos + 100 * Math.cos(radians);
         vposmirror = (pos**1.15)/2;   
         hposmirror = pos + 50 * Math.sin(radians);  
       elemmirror.style.top = -vposmirror + "px";
@@ -66,78 +66,78 @@ function myMove2() {
 
 
 export default function decorate(block) {
-  //Create a div to be used with a text
+  // Create a div to be used with a text
   let floatemoji_text_div = document.createElement("div");
     floatemoji_text_div.id = "floatemojitext";
     
-  //Create some text and nest it in floatemoji_text_div
+  // Create some text and nest it in floatemoji_text_div
   var floatemojitext = document.createTextNode("Click an emoji to react to the page.");
     floatemoji_text_div.appendChild(floatemojitext);
 
-  //Nest floatemoji_text_div in the page
+  // Nest floatemoji_text_div in the page
   document.body.appendChild(floatemoji_text_div);
 
-  //This creates a div and gives it an id of "container", this id is referenced in the css file.
+  // This creates a div and gives it an id of "container", this id is referenced in the css file.
   let new_div = document.createElement("div");
     new_div.id = "container";
 
-  //This creates a div and gives it an id of "animate", this id is referenced in the css file.  
+  // This creates a div and gives it an id of "animate", this id is referenced in the css file.  
   let new_div2 = document.createElement("div");
     new_div2.id = "animate";
 
-//The next commented out lines would have created a button that calls the myMove function.   
+// The next commented out lines would have created a button that calls the myMove function.   
 // var x = document.createElement("BUTTON");
 // var t = document.createTextNode("Click me");
 //   x.appendChild(t);
 //   document.body.appendChild(x);
 //   x.addEventListener("click", myMove);
 
-  //Assemble the divs.
-  //nest new_div2 inside new_div.  
+  // Assemble the divs.
+  // nest new_div2 inside new_div.  
   new_div.appendChild(new_div2);
 
-  //nest new_div inside the whole page.
+  // nest new_div inside the whole page.
     document.body.appendChild(new_div);
 
-  //Create the large heart emoji and nest it in new_div2.  Make it clickable, and on click it calls the myMove function.  
+  // Create the large heart emoji and nest it in new_div2.  Make it clickable, and on click it calls the myMove function.  
   var emoji = document.createTextNode("❤️");
     new_div2.appendChild(emoji);
     new_div2.addEventListener("click", myMove);
   
-  //Create new_div3 with an id of animatemirror.  Nest new_div3 inside of new_div.
-  //Create the small heart emoji and nest it in new_div3.
+  // Create new_div3 with an id of animatemirror.  Nest new_div3 inside of new_div.
+  // Create the small heart emoji and nest it in new_div3.
   let new_div3 = document.createElement("div");
     new_div3.id = "animatemirror";
     new_div.appendChild(new_div3);
       var emojimirror = document.createTextNode("❤️");
       new_div3.appendChild(emojimirror);
 
-  //Create a div that contains the rocket emojis.  This is hard coded in the css to be left 50px of the hearts.
-  //There is probably a better way of doing this.  It uses "container2" and "animate2" in the css.    
+  // Create a div that contains the rocket emojis.  This is hard coded in the css to be left 50px of the hearts.
+  // There is probably a better way of doing this.  It uses "container2" and "animate2" in the css.    
   let second_emoji_div = document.createElement("div");
     second_emoji_div.id = "container2";
   let second_emoji_div_animate = document.createElement("div");
     second_emoji_div_animate.id = "animate2";
 
-    //nest second_emoji_div_animate inside of second_emoji_div.
+    // nest second_emoji_div_animate inside of second_emoji_div.
     second_emoji_div.appendChild(second_emoji_div_animate);
 
-    //Nest second_emoji_div inside of the page.
+    // Nest second_emoji_div inside of the page.
     document.body.appendChild(second_emoji_div);
 
-  //Create the large rocket emoji.  Nest it inside second_emoji_div_animate, and on click it calls the myMove2 function.
+  // Create the large rocket emoji.  Nest it inside second_emoji_div_animate, and on click it calls the myMove2 function.
   var emoji2 = document.createTextNode("🚀");
     second_emoji_div_animate.appendChild(emoji2);
     second_emoji_div_animate.addEventListener("click", myMove2);
 
-  //create a second_emoji_div_animate_mirror div.
+  // Create a second_emoji_div_animate_mirror div.
   let second_emoji_div_animate_mirror = document.createElement("div");
     second_emoji_div_animate_mirror.id = "animatemirror2";
 
-    //Nest second_emoji_div_animate_mirror inside of second_emoji_div.
+    // Nest second_emoji_div_animate_mirror inside of second_emoji_div.
     second_emoji_div.appendChild(second_emoji_div_animate_mirror);
 
-      //Create the small rocket emoji and nest it inside of second_emoji_div_animate_mirror.
+      // Create the small rocket emoji and nest it inside of second_emoji_div_animate_mirror.
       var secondemojimirror = document.createTextNode("🚀");
       second_emoji_div_animate_mirror.appendChild(secondemojimirror);
 }
