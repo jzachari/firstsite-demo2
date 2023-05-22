@@ -3,13 +3,13 @@ function myMove() {
   let id = null;
   const elem = document.getElementById("animate");
   const elemmirror = document.getElementById("animatemirror");
-  let pos = 0;
-  let vpos = 0;
-  let hpos = 0;
-  let vposmirror = 0;
-  let hposmirror = 0;
+  let pos = '0';
+  let vpos = '0';
+  let hpos = '0';
+  let vposmirror = '0';
+  let hposmirror = '0';
   clearInterval(id);
-  id = setInterval(frame, 5.1);
+  id = setInterval(frame, 5);
   var w = window.innerWidth;
   var h = window.innerHeight;
   function frame() {
@@ -35,11 +35,11 @@ function myMove2() {
   let id = null;
   const elem = document.getElementById("animate2");
   const elemmirror = document.getElementById("animatemirror2");
-  let pos = 0;
-  let hpos = 0;
-  let vpos = 0;
-  let vposmirror = 0;
-  let hposmirror = 0;
+  let pos = '0';
+  let hpos = '0';
+  let vpos = '0';
+  let vposmirror = '0';
+  let hposmirror = '0';
   clearInterval(id);
   id = setInterval(frame, 5);
   var w = window.innerWidth;
