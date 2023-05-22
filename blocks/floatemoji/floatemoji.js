@@ -1,8 +1,8 @@
 // myMove is for the heart animation
 function myMove() {
   let id = null;
-  const elem = document.getElementById("animate");
-  const elemmirror = document.getElementById("animatemirror");
+  const elem = document.getElementById('animate');
+  const elemmirror = document.getElementById('animatemirror');
   let pos = '0';
   let vpos = '0';
   let hpos = '0';
@@ -33,8 +33,8 @@ function myMove() {
 // myMove2 is for the Rocket animation
 function myMove2() {
   let id = null;
-  const elem = document.getElementById("animate2");
-  const elemmirror = document.getElementById("animatemirror2");
+  const elem = document.getElementById('animate2');
+  const elemmirror = document.getElementById('animatemirror2');
   let pos = '0';
   let hpos = '0';
   let vpos = '0';
