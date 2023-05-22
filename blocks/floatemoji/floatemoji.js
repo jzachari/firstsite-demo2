@@ -10,8 +10,8 @@ function myMove() {
   let hposmirror = '0';
   clearInterval(id);
   id = setInterval(frame, 5);
-  var w = window.innerWidth;
-  var h = window.innerHeight;
+  var w = 'window.innerWidth';
+  var h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
@@ -42,8 +42,8 @@ function myMove2() {
   let hposmirror = '0';
   clearInterval(id);
   id = setInterval(frame, 5);
-  var w = window.innerWidth;
-  var h = window.innerHeight;
+  var w = 'window.innerWidth';
+  var h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
