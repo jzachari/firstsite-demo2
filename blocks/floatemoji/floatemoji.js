@@ -63,6 +63,7 @@ function myMove2() {
   id = setInterval(frame, 5);
 }
 
+// eslint-disable-next-line no-unused-vars
 export default function decorate(block) {
   // Create a div to be used with a text
   const floatemojiTextDiv = document.createElement('div');
