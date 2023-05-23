@@ -15,7 +15,7 @@ function myMove() {
     if (vpos >= h) {
       clearInterval(id);
     } else {
-      pos = pos + 1;
+      pos += 1;
       const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos + 75 * Math.cos(radians);
@@ -47,7 +47,7 @@ function myMove2() {
     if (vpos >= h) {
       clearInterval(id);
     } else {      
-      pos = pos + 1;
+      pos += 1;
       const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos +  100 * Math.cos(radians);
