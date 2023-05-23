@@ -3,11 +3,11 @@ function myMove() {
   let id = null;
   const elem = document.getElementById('animate');
   const elemmirror = document.getElementById('animatemirror');
-  let pos = '0';
-  let vpos = '0';
-  let hpos = '0';
-  // let vposmirror = '0';
-  let hposmirror = '0';
+  let pos = 0;
+  let vpos = 0;
+  let hpos = 0;
+  // let vposmirror = 0;
+  let hposmirror = 0;
   clearInterval(id);
   // let w = 'window.innerWidth';
   let h = 'window.innerHeight';
@@ -15,7 +15,7 @@ function myMove() {
     if (vpos >= h) {
       clearInterval(id);
     } else {
-      pos+=1;
+      pos = pos + 1;
       const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos + 75 * Math.cos(radians);
@@ -35,11 +35,11 @@ function myMove2() {
   let id = null;
   const elem = document.getElementById('animate2');
   const elemmirror = document.getElementById('animatemirror2');
-  let pos = '0';
-  let hpos = '0';
-  let vpos = '0';
-  let vposmirror = '0';
-  let hposmirror = '0';
+  let pos = 0;
+  let hpos = 0;
+  let vpos = 0;
+  let vposmirror = 0;
+  let hposmirror = 0;
   clearInterval(id);
   // let w = 'window.innerWidth';
   let h = 'window.innerHeight';
@@ -47,7 +47,7 @@ function myMove2() {
     if (vpos >= h) {
       clearInterval(id);
     } else {      
-      pos+=1;
+      pos = pos + 1;
       const radians = pos * Math.PI/180;
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos +  100 * Math.cos(radians);
