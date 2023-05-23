@@ -51,13 +51,13 @@ function myMove2() {
       const radians = pos * (Math.PI / 180);
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos + 100 * Math.cos(radians);
-      elem.style.top = -vpos + 'px';
-      elem.style.left = hpos + 'px';
+      elem.style.top = `-${vpos}px`;
+      elem.style.left = `${hpos}px`;
       // vposmirror = pos + 100 * Math.cos(radians);
       vposmirror = (pos ** 1.15) / 2;
       hposmirror = pos + 50 * Math.sin(radians);
-      elemmirror.style.top = -vposmirror + 'px';
-      elemmirror.style.left = hposmirror + 'px';
+      elemmirror.style.top = `-${vposmirror}px`;
+      elemmirror.style.left = `${hposmirror}px`;
     }
   }
   id = setInterval(frame, 5);
