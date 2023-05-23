@@ -97,7 +97,7 @@ export default function decorate(block) {
   // nest new_div inside the whole page.
   document.body.appendChild(new_div);
 
-  // Create the large heart emoji and nest it in new_div2.  
+  // Create the large heart emoji and nest it in new_div2.
   // Make it clickable, and on click it calls the myMove function.
   const emoji = document.createTextNode('❤️');
   new_div2.appendChild(emoji);
@@ -111,9 +111,9 @@ export default function decorate(block) {
   const emojimirror = document.createTextNode('❤️');
   new_div3.appendChild(emojimirror);
 
-  // Create a div that contains the rocket emojis.  
+  // Create a div that contains the rocket emojis.
   // This is hard coded in the css to be left 50px of the hearts.
-  // There is probably a better way of doing this.  
+  // There is probably a better way of doing this.
   // It uses "container2" and "animate2" in the css.
   const second_emoji_div = document.createElement('div');
   second_emoji_div.id = 'container2';
@@ -126,7 +126,7 @@ export default function decorate(block) {
   // Nest second_emoji_div inside of the page.
   document.body.appendChild(second_emoji_div);
 
-  // Create the large rocket emoji.  
+  // Create the large rocket emoji.
   // Nest it inside second_emoji_div_animate, and on click it calls the myMove2 function.
   const emoji2 = document.createTextNode('🚀');
   second_emoji_div_animate.appendChild(emoji2);
