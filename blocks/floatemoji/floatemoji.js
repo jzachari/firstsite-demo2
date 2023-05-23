@@ -10,21 +10,21 @@ function myMove() {
   let hposmirror = 0;
   clearInterval(id);
   // let w = 'window.innerWidth';
-  let h = 'window.innerHeight';
+  const h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
     } else {
       pos += 1;
-      const radians = pos * Math.PI/180;
+      const radians = pos * (Math.PI / 180);
       vpos = pos + 100 * Math.sin(radians);
       hpos = pos + 75 * Math.cos(radians);
-      elem.style.top = -pos + "px";
-      elem.style.left = hpos + "px";
+      elem.style.top = -pos + 'px';
+      elem.style.left = hpos + 'px';
       // vposmirror = pos + 100 * Math.cos(radians);
       hposmirror = pos + 75 * Math.sin(radians);
-      elemmirror.style.top = -pos + "px";
-      elemmirror.style.left = hposmirror + "px";
+      elemmirror.style.top = -pos + 'px';
+      elemmirror.style.left = hposmirror + 'px';
     }
   }
   id = setInterval(frame, 5);
@@ -42,22 +42,22 @@ function myMove2() {
   let hposmirror = 0;
   clearInterval(id);
   // let w = 'window.innerWidth';
-  let h = 'window.innerHeight';
+  const h = 'window.innerHeight';
   function frame() {
     if (vpos >= h) {
       clearInterval(id);
-    } else {      
+    } else {
       pos += 1;
-      const radians = pos * Math.PI/180;
+      const radians = pos * (Math.PI / 180);
       vpos = pos + 100 * Math.sin(radians);
-      hpos = pos +  100 * Math.cos(radians);
-      elem.style.top = -vpos + "px";
-      elem.style.left = hpos + "px";
- // vposmirror = pos + 100 * Math.cos(radians);
-        vposmirror = (pos**1.15)/2;   
-        hposmirror = pos + 50 * Math.sin(radians);  
-      elemmirror.style.top = -vposmirror + "px";
-      elemmirror.style.left = hposmirror + "px";
+      hpos = pos + 100 * Math.cos(radians);
+      elem.style.top = -vpos + 'px';
+      elem.style.left = hpos + 'px';
+      // vposmirror = pos + 100 * Math.cos(radians);
+      vposmirror = (pos ** 1.15)/2;   
+      hposmirror = pos + 50 * Math.sin(radians);  
+      elemmirror.style.top = -vposmirror + 'px';
+      elemmirror.style.left = hposmirror + 'px';
     }
   }
   id = setInterval(frame, 5);
