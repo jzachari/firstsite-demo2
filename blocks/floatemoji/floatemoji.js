@@ -1,4 +1,4 @@
-// myMove is for the heart animation
+// myMove is for the heart animation.
 function myMove() {
   let id = null;
   const elem = document.getElementById('animate');
