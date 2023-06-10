@@ -29,7 +29,7 @@ function myMove() {
       if (vpos >= h * 0.7) {
         elem.style.opacity = fade;
         elemmirror.style.opacity = fade;
-        fade = fade - 0.004;
+        fade -= 0.004;
         if (fade <= 0) {
           fade = 0;
         }
@@ -71,7 +71,7 @@ function myMove2() {
       if (vpos >= h * 0.7) {
         elem.style.opacity = fade;
         elemmirror.style.opacity = fade;
-        fade = fade - 0.004;
+        fade -= 0.004;
         if (fade <= 0) {
           fade = 0;
         }
