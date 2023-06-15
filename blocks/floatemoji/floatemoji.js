@@ -32,6 +32,10 @@ function myMove() {
         fade -= 0.004;
         if (fade <= 0) {
           fade = 0;
+          // hide the element called elem
+          elem.style.display = 'none';
+          // hide the element called elemmirror
+          elemmirror.style.display = 'none';
         }
       }
     }
@@ -74,6 +78,10 @@ function myMove2() {
         fade -= 0.004;
         if (fade <= 0) {
           fade = 0;
+          // hide the element called elem
+          elem.style.display = 'none';
+          // hide the element called elemmirror
+          elemmirror.style.display = 'none';
         }
       }
     }
