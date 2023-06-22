@@ -1,0 +1,98 @@
+// A function that takes a hexidecimal color and returns the red, green, and blue values as an array
+function hexToRgb(hex) {
+    // Remove the hash if it exists
+    hex = hex.replace('#', '');
+    // remove whitespace if it exists
+    hex = hex.replace(' ', '');
+    // Check if color is shorthand hex
+    if (hex.length == 3) {
+        // write "shorthand" to the console
+        console.log("shorthand");
+        // Double the characters
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    // write hex to the console
+    console.log(hex);
+    // Calculate r, g, and b values
+    var r = parseInt(hex.substring(0, 2), 16);
+    var g = parseInt(hex.substring(2, 4), 16);
+    var b = parseInt(hex.substring(4, 6), 16);
+    // write r to the console
+    console.log(r);
+    // write g to the console
+    console.log(g);
+    // write b to the console
+    console.log(b);
+    // return the rgb values as an array
+    return [r, g, b];
+}
+
+// A function that converts rgb values to hexidecimal color
+function rgbToHex(r, g, b) {
+    // Convert r, g, b values to hexidecimal
+    var bin = r << 16 | g << 8 | b;
+    // Convert hexidecimal to string
+    return (function(h) {
+        return new Array(7 - h.length).join("0") + h;
+    })(bin.toString(16).toUpperCase());
+}
+
+// increment the r, g, and b values by 1 until they reach the maxShift value
+function shiftColor() {
+    // Set the maxium value that r, b or g can shift by 50
+    var maxShift = 50;
+    // get the value for the css variable --highlight-background-color
+    var color = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
+    // write color to the console
+    console.log(color);
+    // Convert the color to rgb
+    var rgb = hexToRgb(color);
+    // write rgb to the console
+    console.log(rgb);
+    // Save the original rgb values
+    const original = rgb;
+    // Increment the r, g, and b values by 1
+    rgb[0] += 1;
+    rgb[1] += 1;
+    rgb[2] += 1;
+    // if r, g, or b is equal to or greater than 255, set it to 255
+    if (rgb[0] >= 255) {
+        rgb[0] = 255;
+        // clear the interval id
+        clearInterval(id);
+    }
+    if (rgb[1] >= 255) {
+        rgb[1] = 255;
+    }
+    if (rgb[2] >= 255) {
+        rgb[2] = 255;
+    }
+    // if r, g, or b is equal to or greater than original + maxShift, set it to original + maxShift
+    if (rgb[0] >= original[0] + maxShift) {
+        rgb[0] = original[0] + maxShift;
+    }
+    if (rgb[1] >= original[1] + maxShift) {
+        rgb[1] = original[1] + maxShift;
+    }
+    if (rgb[2] >= original[2] + maxShift) {
+        rgb[2] = original[2] + maxShift;
+    }
+    // Convert the rgb values back to hexidecimal
+    var hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+    // add # to the beginning of the hexidecimal color
+    hex = '#' + hex;
+    // write hex to the console
+    console.log(hex);
+    //Set the css variable --highlight-background-color to the new color
+    document.documentElement.style.setProperty('--highlight-background-color', hex);
+} 
+
+// Call the shiftColor function every 500 milliseconds and set it to the variable id
+var id = setInterval(shiftColor, 500);
+// setInterval(shiftColor, 500);
+// shiftColor();
+
+// eslint-disable-next-line no-unused-vars
+export default function decorate(block) {
+    // For the moment do nothing
+}
