@@ -8,6 +8,7 @@ function myMove() {
   let hpos = 0;
   // let vposmirror = 0;
   let hposmirror = 0;
+  let fade = 1;
   clearInterval(id);
   // const w = window.innerWidth;
   const h = window.innerHeight;
@@ -25,6 +26,18 @@ function myMove() {
       hposmirror = pos + 75 * Math.sin(radians);
       elemmirror.style.top = `-${pos}px`;
       elemmirror.style.left = `${hposmirror}px`;
+      if (vpos >= h * 0.7) {
+        elem.style.opacity = fade;
+        elemmirror.style.opacity = fade;
+        fade -= 0.004;
+        if (fade <= 0) {
+          fade = 0;
+          // hide the element called elem
+          elem.style.display = 'none';
+          // hide the element called elemmirror
+          elemmirror.style.display = 'none';
+        }
+      }
     }
   }
   id = setInterval(frame, 5);
@@ -41,6 +54,7 @@ function myMove2() {
   let vposmirror = 0;
   let hposmirror = 0;
   clearInterval(id);
+  let fade = 1;
   // const w = window.innerWidth;
   const h = window.innerHeight;
   function frame() {
@@ -58,6 +72,18 @@ function myMove2() {
       hposmirror = pos + 50 * Math.sin(radians);
       elemmirror.style.top = `-${vposmirror}px`;
       elemmirror.style.left = `${hposmirror}px`;
+      if (vpos >= h * 0.7) {
+        elem.style.opacity = fade;
+        elemmirror.style.opacity = fade;
+        fade -= 0.004;
+        if (fade <= 0) {
+          fade = 0;
+          // hide the element called elem
+          elem.style.display = 'none';
+          // hide the element called elemmirror
+          elemmirror.style.display = 'none';
+        }
+      }
     }
   }
   id = setInterval(frame, 5);
