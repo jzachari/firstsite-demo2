@@ -11,9 +11,9 @@ function hexToRgb(hexp) {
     hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
   }
   // Calculate r, g, and b values
-  let r = parseInt(hex.substring(0, 2), 16);
-  let g = parseInt(hex.substring(2, 4), 16);
-  let b = parseInt(hex.substring(4, 6), 16);
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
   return [r, g, b];
 }
 
@@ -21,7 +21,7 @@ function hexToRgb(hexp) {
 function rgbToHex(r, g, b) {
   // Convert r, g, b values to hexidecimal
   // eslint-disable-next-line no-bitwise
-  let bin = r << 16 | g << 8 | b;
+  const bin = (r << 16) | (g << 8) | b;
   // Convert hexidecimal to string
   return (function(h) {
     return new Array(7 - h.length).join("0") + h;
