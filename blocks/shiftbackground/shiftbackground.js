@@ -33,9 +33,9 @@ function shiftColor() {
   // Set the maxium value that r, b or g can shift by 50
   var maxShift = 50;
   // get the value for the css variable --highlight-background-color
-  var hex = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
-  // Convert the hex to rgb
-  var rgb = hexToRgb(hex);
+  var color = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
+  // Convert the color to rgb
+  var rgb = hexToRgb(color);
   // write rgb to the console
   // console.log(rgb);
   // Save the original rgb values
