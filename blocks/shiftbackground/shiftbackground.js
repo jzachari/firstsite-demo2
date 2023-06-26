@@ -1,5 +1,7 @@
 // A function that takes a hexidecimal color and returns the red, green, and blue values as an array
 function hexToRgb(hex) {
+  // define the hex variable
+  var hex = hex;  
   // Remove the hash if it exists
   hex = hex.replace('#', '');
   // remove whitespace if it exists
@@ -32,9 +34,7 @@ function shiftColor() {
   var maxShift = 50;
   // get the value for the css variable --highlight-background-color
   var hex = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
-  // write color to the console
-  // console.log(color);
-  // Convert the color to rgb
+  // Convert the hex to rgb
   var rgb = hexToRgb(hex);
   // write rgb to the console
   // console.log(rgb);
