@@ -6,21 +6,22 @@ function hexToRgb(hexp) {
   // remove whitespace if it exists
   hex = hex.replace(' ', '');
   // Check if color is shorthand hex
-  if (hex.length == 3) {
+  if (hex.length === 3) {
     // Double the characters
     hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
   }
   // Calculate r, g, and b values
-  var r = parseInt(hex.substring(0, 2), 16);
-  var g = parseInt(hex.substring(2, 4), 16);
-  var b = parseInt(hex.substring(4, 6), 16);
+  let r = parseInt(hex.substring(0, 2), 16);
+  let g = parseInt(hex.substring(2, 4), 16);
+  let b = parseInt(hex.substring(4, 6), 16);
   return [r, g, b];
 }
 
 // A function that converts rgb values to hexidecimal color
 function rgbToHex(r, g, b) {
   // Convert r, g, b values to hexidecimal
-  var bin = r << 16 | g << 8 | b;
+  // eslint-disable-next-line no-bitwise
+  let bin = r << 16 | g << 8 | b;
   // Convert hexidecimal to string
   return (function(h) {
     return new Array(7 - h.length).join("0") + h;
