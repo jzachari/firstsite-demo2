@@ -1,19 +1,14 @@
 // A function that takes a hexidecimal color and returns the red, green, and blue values as an array
 function hexToRgb(hex) {
   // Remove the hash if it exists
-  var hex = hex.replace('#', '');
+  hex = hex.replace('#', '');
   // remove whitespace if it exists
   hex = hex.replace(' ', '');
   // Check if color is shorthand hex
   if (hex.length == 3) {
-    // write "shorthand" to the console
-    // console.log("shorthand");
     // Double the characters
     hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
   }
-  // write hex to the console
-  // console.log(hex);
-
   // Calculate r, g, and b values
   var r = parseInt(hex.substring(0, 2), 16);
   var g = parseInt(hex.substring(2, 4), 16);
@@ -36,11 +31,11 @@ function shiftColor() {
   // Set the maxium value that r, b or g can shift by 50
   var maxShift = 50;
   // get the value for the css variable --highlight-background-color
-  var color = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
+  var hex = getComputedStyle(document.documentElement).getPropertyValue('--highlight-background-color');
   // write color to the console
   // console.log(color);
   // Convert the color to rgb
-  var rgb = hexToRgb(color);
+  var rgb = hexToRgb(hex);
   // write rgb to the console
   // console.log(rgb);
   // Save the original rgb values
