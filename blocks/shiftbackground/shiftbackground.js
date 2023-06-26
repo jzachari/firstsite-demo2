@@ -75,11 +75,11 @@ function shiftColor() {
       clearInterval(id);
     }
     // Convert the rgb values back to hexidecimal
-    var hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+    let newhex = rgbToHex(rgb[0], rgb[1], rgb[2]);
     // add # to the beginning of the hexidecimal color
-    hex = '#' + hex;
+    newhex = '#' + newhex;
     //Set the css variable --highlight-background-color to the new color
-    document.documentElement.style.setProperty('--highlight-background-color', hex);
+    document.documentElement.style.setProperty('--highlight-background-color', newhex);
 } 
 
 // Call the shiftColor function every 500 milliseconds and set it to the variable id
