@@ -1,5 +1,6 @@
 // A function that takes a hexidecimal color and returns the red, green, and blue values as an array
-function hexToRgb(hex) {
+function hexToRgb(hexp) {
+  let hex = hexp;
   // Remove the hash if it exists
   hex = hex.replace('#', '');
   // remove whitespace if it exists
