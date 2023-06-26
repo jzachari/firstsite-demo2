@@ -1,7 +1,7 @@
 // A function that takes a hexidecimal color and returns the red, green, and blue values as an array
 function hexToRgb(hex) {
   // Remove the hash if it exists
-  var hex = hex.replace('#', '');
+  hex = hex.replace('#', '');
   // remove whitespace if it exists
   hex = hex.replace(' ', '');
   // Check if color is shorthand hex
