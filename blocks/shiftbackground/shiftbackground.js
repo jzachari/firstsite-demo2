@@ -85,7 +85,7 @@ function shiftColorWrapper() {
     newhex = `#${newhex}`;
     // Set the css variable --highlight-background-color to the new color
     document.documentElement.style.setProperty('--highlight-background-color', newhex);
-    }
+  }
   // Call the shiftColor function every 500 milliseconds and set it to the const id
   id = setInterval(shiftColor, 500);
 }
