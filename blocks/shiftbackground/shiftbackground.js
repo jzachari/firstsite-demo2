@@ -30,6 +30,7 @@ function rgbToHex(r, g, b) {
 
 // increment the r, g, and b values by 1 until they reach the maxShift value
 function shiftColor() {
+  var id;
   // Set the maxium value that r, b or g can shift by 50
   const maxShift = 50;
   // get the value for the css variable --highlight-background-color
@@ -80,8 +81,6 @@ function shiftColor() {
   let newhex = rgbToHex(rgb[0], rgb[1], rgb[2]);
   // add # to the beginning of the hexidecimal newhex
   newhex = `#${newhex}`;
-  // write newhex to the console
-  console.log(newhex);
   // Set the css variable --highlight-background-color to the new color
   document.documentElement.style.setProperty('--highlight-background-color', newhex);
 }
