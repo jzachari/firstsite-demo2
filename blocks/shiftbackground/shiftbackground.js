@@ -28,9 +28,6 @@ function rgbToHex(r, g, b) {
   }(bin.toString(16).toUpperCase()));
 }
 
-// Call the shiftColor function every 500 milliseconds and set it to the const id
-var id = setInterval(shiftColor, 500);
-
 // increment the r, g, and b values by 1 until they reach the maxShift value
 function shiftColor() {
   // Set the maxium value that r, b or g can shift by 50
@@ -86,3 +83,5 @@ function shiftColor() {
   // Set the css variable --highlight-background-color to the new color
   document.documentElement.style.setProperty('--highlight-background-color', newhex);
 }
+// Call the shiftColor function every 500 milliseconds and set it to the const id
+var id = setInterval(shiftColor, 500);
