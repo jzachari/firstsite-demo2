@@ -30,7 +30,7 @@ function rgbToHex(r, g, b) {
 
 // increment the r, g, and b values by 1 until they reach the maxShift value
 function shiftColor() {
-  var id;
+  let id;
   // Set the maxium value that r, b or g can shift by 50
   const maxShift = 50;
   // get the value for the css variable --highlight-background-color
