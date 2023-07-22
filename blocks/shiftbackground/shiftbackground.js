@@ -23,7 +23,7 @@ function rgbToHex(r, g, b) {
   // eslint-disable-next-line no-bitwise
   const bin = (r << 16) | (g << 8) | b;
   // Convert hexidecimal to string
-  return (function (h) {
+  return (function hexToString(h) {
     return new Array(7 - h.length).join('0') + h;
   }(bin.toString(16).toUpperCase()));
 }
