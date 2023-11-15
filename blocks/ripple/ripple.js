@@ -1,7 +1,6 @@
 export default function decorate(block) {
   $('main').ripples({
-    resolution: 512,
-    dropRadius: 20,
-    perturbance: 0.02,
+    resolution: 256,
+    perturbance: 0.01,
   });
 }
