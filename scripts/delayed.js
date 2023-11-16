@@ -1,7 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import {
-  sampleRUM
-} from './lib-franklin.js';
+import { sampleRUM } from './lib-franklin.js';
 
 // Core Web Vitals RUM collection
 sampleRUM('cwv');
@@ -11,8 +9,8 @@ sampleRUM('cwv');
 function jQueryIsReady() {
   // eslint-disable-next-line no-undef
   $('.hero-wrapper').ripples({
-    resolution: 512,
-    radius: 20,
+    resolution: 1024,
+    dropRadius: 40,
     perturbance: 0.09,
   });
 }
